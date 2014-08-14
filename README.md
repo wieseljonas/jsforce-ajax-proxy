@@ -40,7 +40,7 @@ conn.query('SELECT Id, Name FROM Account', function(err, res) {
 If you have a public webservice you can just add the url to the publicapiurl variable
 
 ```
- var publicapiurl = "https://certprep-developer-edition.ap1.force.com/services/apexrest/Exam";
+ var publicapiurl = "https://Example.ap1.force.com/services/apexrest/Example";
 ```
 Here below a Jquery example to call the proxy
 
