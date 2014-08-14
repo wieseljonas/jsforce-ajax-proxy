@@ -37,6 +37,32 @@ conn.query('SELECT Id, Name FROM Account', function(err, res) {
   // ...
 });
 ```
+If you have a public webservice you can just add the url to the publicapiurl variable
+
+```
+ var publicapiurl = "https://certprep-developer-edition.ap1.force.com/services/apexrest/Exam";
+```
+Here below a Jquery example to call the proxy
+
+```
+$.ajax({
+        url: "http://localhost:3123/proxy/Example",
+        type: "POST",
+        contentType: "application/json",
+        data: requestdata,
+        success : function (data) {
+          window.console.log('success');
+          window.console.log(data);
+          //....process
+        },
+        error : function (jqXHR, textStatus, errorThrown) {
+            window.console.log(jqXHR);
+            window.console.log(textStatus);
+            window.console.log(errorThrown);
+        } 
+        //beforeSend: function(xhr){xhr.setRequestHeader('Access-Control-Allow-Origin', '*');    
+      });
+```
 
 ## Note
 
